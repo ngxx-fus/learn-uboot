@@ -1,3 +1,6 @@
+$(info [Kconfig] arch/arm/Kconfig)
+
+
 menu "ARM architecture"
 	depends on ARM
 

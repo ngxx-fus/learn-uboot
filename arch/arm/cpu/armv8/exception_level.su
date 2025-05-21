@@ -1,2 +1,0 @@
-arch/arm/cpu/armv8/exception_level.c:27:13:entry_non_secure	32	static
-arch/arm/cpu/armv8/exception_level.c:44:6:switch_to_non_secure_mode	128	static

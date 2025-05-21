@@ -1,7 +1,0 @@
-cmd/bootefi.c:52:13:efi_clear_bootdev	32	static
-cmd/bootefi.c:354:21:do_bootefi_exec	64	static
-cmd/bootefi.c:43:6:efi_get_image_parameters	0	static
-cmd/bootefi.c:74:6:efi_set_bootdev	80	static
-cmd/bootefi.c:259:14:efi_install_fdt	1200	static
-cmd/bootefi.c:487:14:efi_run_image	96	static
-cmd/bootefi.c:656:12:do_bootefi	64	static

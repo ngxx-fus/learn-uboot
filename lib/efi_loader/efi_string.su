@@ -1,2 +1,0 @@
-lib/efi_loader/efi_string.c:28:6:efi_create_indexed_name	64	static
-lib/efi_loader/efi_string.c:53:14:efi_convert_string	48	static

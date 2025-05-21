@@ -1,2 +1,0 @@
-arch/arm/lib/reset.c:30:13:reset_misc	0	static
-arch/arm/lib/reset.c:34:5:do_reset	16	static

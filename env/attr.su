@@ -1,3 +1,0 @@
-env/attr.c:119:12:regex_callback	624	dynamic
-env/attr.c:28:5:env_attr_walk	64	static
-env/attr.c:169:5:env_attr_lookup	64	static

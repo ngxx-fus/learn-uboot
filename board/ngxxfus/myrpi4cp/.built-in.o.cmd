@@ -1,1 +1,0 @@
-cmd_board/ngxxfus/myrpi4cp/built-in.o :=  rm -f board/ngxxfus/myrpi4cp/built-in.o; aarch64-linux-gnu-ar cDPrsT board/ngxxfus/myrpi4cp/built-in.o board/ngxxfus/myrpi4cp/myrpi4cp.o board/ngxxfus/myrpi4cp/lowlevel_init.o

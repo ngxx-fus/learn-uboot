@@ -1,2 +1,0 @@
-lib/linux_string.c:20:7:skip_spaces	0	static
-lib/linux_string.c:35:7:strim	32	static

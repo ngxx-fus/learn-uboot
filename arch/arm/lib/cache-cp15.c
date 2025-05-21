@@ -12,6 +12,7 @@
 #include <asm/cache.h>
 #include <linux/compiler.h>
 #include <asm/armv7_mpu.h>
+#include <asm/system.h>
 
 #if !(CONFIG_IS_ENABLED(SYS_ICACHE_OFF) && CONFIG_IS_ENABLED(SYS_DCACHE_OFF))
 

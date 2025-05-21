@@ -1,1 +1,0 @@
-lib/efi_loader/efi_smbios.c:21:14:efi_smbios_register	48	static

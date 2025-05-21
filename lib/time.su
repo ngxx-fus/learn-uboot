@@ -1,9 +1,0 @@
-lib/time.c:116:25:get_ticks	16	static
-lib/time.c:139:12:timer_init	0	static
-lib/time.c:145:14:get_timer	32	static
-lib/time.c:159:17:get_timer_us	32	static
-lib/time.c:169:30:timer_get_us	32	static
-lib/time.c:164:22:get_timer_us_long	32	static
-lib/time.c:174:10:usec_to_tick	32	static
-lib/time.c:182:13:__udelay	32	static
-lib/time.c:194:6:udelay	48	static

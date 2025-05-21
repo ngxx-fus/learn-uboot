@@ -1,3 +1,0 @@
-drivers/video/video_bmp.c:57:13:write_pix8	0	static
-drivers/video/video_bmp.c:232:6:video_bmp_get_info	0	static
-drivers/video/video_bmp.c:242:5:video_bmp_display	144	static

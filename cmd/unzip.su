@@ -1,2 +1,0 @@
-cmd/unzip.c:14:12:do_unzip	64	static
-cmd/unzip.c:48:12:do_gzwrite	80	static

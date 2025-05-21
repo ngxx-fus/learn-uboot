@@ -1,5 +1,0 @@
-cmd/pxe.c:29:12:do_get_tftp	64	static
-cmd/pxe.c:312:12:do_pxe	48	static
-cmd/pxe.c:253:1:do_pxe_boot	96	static
-cmd/pxe.c:134:5:pxe_get	176	static
-cmd/pxe.c:201:1:do_pxe_get	64	static

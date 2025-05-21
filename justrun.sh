@@ -2,7 +2,7 @@
 
 my_vender=ngxxfus
 my_board=myrpi4cp
-target="${my_board}_defconfig"
+target=myrpi4cp_defconfig
 
 clear ;
 

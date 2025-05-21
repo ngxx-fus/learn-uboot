@@ -72,6 +72,11 @@ static struct mm_region nf2711_mem_map[MEM_MAP_MAX_ENTRIES] = {
 	}
 };
 
+
+#pragma message ("mm_region *mem_map = nf271x_mem_map")
+#pragma message ("[Build] arch/arm/mach-bcm283x/init.c")
+
+
 struct mm_region *mem_map = nf271x_mem_map;
 
 /*

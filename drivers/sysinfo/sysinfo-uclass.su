@@ -1,6 +1,0 @@
-drivers/sysinfo/sysinfo-uclass.c:17:5:sysinfo_get	32	static
-drivers/sysinfo/sysinfo-uclass.c:30:5:sysinfo_detect	32	static
-drivers/sysinfo/sysinfo-uclass.c:46:5:sysinfo_get_fit_loadable	48	static
-drivers/sysinfo/sysinfo-uclass.c:61:5:sysinfo_get_bool	48	static
-drivers/sysinfo/sysinfo-uclass.c:75:5:sysinfo_get_int	48	static
-drivers/sysinfo/sysinfo-uclass.c:89:5:sysinfo_get_str	48	static

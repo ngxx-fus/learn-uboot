@@ -1,2 +1,0 @@
-lib/qsort.c:24:6:qsort	96	static
-lib/qsort.c:70:5:strcmp_compar	0	static

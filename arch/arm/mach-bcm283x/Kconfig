@@ -1,3 +1,5 @@
+$(info [Kconfig] arch/arm/mach-bcm283x/Kconfig)
+
 config BCM2835
 	bool "Broadcom BCM2835 SoC support"
 	depends on ARCH_BCM283X

@@ -1,2 +1,0 @@
-drivers/reset/reset-ngxxfus.c:13:12:ngxxfus_reset_request	0	static
-drivers/reset/reset-ngxxfus.c:21:12:ngxxfus_reset_assert	16	static

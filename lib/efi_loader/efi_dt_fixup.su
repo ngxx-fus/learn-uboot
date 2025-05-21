@@ -1,3 +1,0 @@
-lib/efi_loader/efi_dt_fixup.c:55:6:efi_try_purge_kaslr_seed	64	static
-lib/efi_loader/efi_dt_fixup.c:85:6:efi_carve_out_dt_rsv	112	static
-lib/efi_loader/efi_dt_fixup.c:142:1:efi_dt_fixup	1168	static

@@ -1,4 +1,0 @@
-lib/efi_loader/efi_rng.c:59:28:rng_getinfo	64	static
-lib/efi_loader/efi_rng.c:31:21:platform_get_rng_device	48	static
-lib/efi_loader/efi_rng.c:106:28:getrng	80	static
-lib/efi_loader/efi_rng.c:163:14:efi_rng_register	48	static

@@ -1,0 +1,9 @@
+board/ngxxfus/myrpi4cp/myrpi4cp.c:275:5:dram_init	160	static
+board/ngxxfus/myrpi4cp/myrpi4cp.c:303:5:dram_init_banksize	16	static
+board/ngxxfus/myrpi4cp/myrpi4cp.c:344:13:board_get_usable_ram_top	0	static
+board/ngxxfus/myrpi4cp/myrpi4cp.c:422:5:misc_init_r	208	static
+board/ngxxfus/myrpi4cp/myrpi4cp.c:497:5:board_init	160	static
+board/ngxxfus/myrpi4cp/myrpi4cp.c:513:7:board_fdt_blob_setup	0	static
+board/ngxxfus/myrpi4cp/myrpi4cp.c:525:5:copy_property	80	static
+board/ngxxfus/myrpi4cp/myrpi4cp.c:545:6:update_fdt_from_fw	48	static
+board/ngxxfus/myrpi4cp/myrpi4cp.c:574:5:ft_board_setup	32	static

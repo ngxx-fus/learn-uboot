@@ -1,0 +1,2 @@
+cmd/video.c:15:12:do_video_setcursor	64	static
+cmd/video.c:33:12:do_video_puts	48	static

@@ -1,0 +1,29 @@
+# board/ngxxfus/myrpi4/Kconfig
+
+# config TARGET_MYRPI4
+#     bool "Support NGXXFUS MYRPI4 board"
+#     depends on ARM
+#     select ARCH_BCM283X
+#     select MMC
+#     select MMC_SDHCI
+#     select MMC_SDHCI_BCM2835
+#     select DM_SERIAL
+#     select BCM2835_SERIAL
+#     help
+#       Support for NGXXFUS MYRPI4 custom board based on Raspberry Pi 4 (BCM2711).
+
+if TARGET_MYRPI4
+config SYS_BOARD
+    string
+    default "myrpi4"
+
+config SYS_VENDOR
+    string
+    default "ngxxfus"
+
+config SYS_CONFIG_NAME
+    string
+    default "myrpi4"
+endif
+
+

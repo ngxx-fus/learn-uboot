@@ -1,0 +1,11 @@
+lib/efi_loader/efi_disk.c:303:28:efi_disk_flush_blocks	16	static
+lib/efi_loader/efi_disk.c:67:28:efi_disk_reset	16	static
+lib/efi_loader/efi_disk.c:393:21:efi_disk_add_dev.part.0	112	static
+lib/efi_loader/efi_disk.c:171:28:efi_disk_read_blocks	64	static
+lib/efi_loader/efi_disk.c:237:28:efi_disk_write_blocks	64	static
+lib/efi_loader/efi_disk.c:83:6:efi_disk_is_removable	32	static
+lib/efi_loader/efi_disk.c:329:1:efi_fs_from_path	64	static
+lib/efi_loader/efi_disk.c:656:5:efi_disk_probe	112	static
+lib/efi_loader/efi_disk.c:704:5:efi_disk_remove	48	static
+lib/efi_loader/efi_disk.c:747:14:efi_disk_get_device_name	80	static
+lib/efi_loader/efi_disk.c:797:14:efi_disks_register	32	static

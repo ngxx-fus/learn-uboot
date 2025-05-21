@@ -1,0 +1,8 @@
+lib/abuf.c:85:7:abuf_uninit_move	32	static
+lib/abuf.c:106:6:abuf_init_set	0	static
+lib/abuf.c:112:6:abuf_init_move	0	static
+lib/abuf.c:118:6:abuf_uninit	32	static
+lib/abuf.c:18:6:abuf_set	48	static
+lib/abuf.c:26:6:abuf_map_sysmem	48	static
+lib/abuf.c:46:6:abuf_realloc	48	static
+lib/abuf.c:125:6:abuf_init	0	static

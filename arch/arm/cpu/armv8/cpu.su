@@ -1,0 +1,3 @@
+arch/arm/cpu/armv8/cpu.c:30:6:sdelay	0	static
+arch/arm/cpu/armv8/cpu.c:36:13:board_cleanup_before_linux	0	static
+arch/arm/cpu/armv8/cpu.c:38:5:cleanup_before_linux	16	static

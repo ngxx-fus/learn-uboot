@@ -1,0 +1,2 @@
+drivers/usb/host/xhci-pci.c:93:12:xhci_pci_remove	32	static
+drivers/usb/host/xhci-pci.c:53:12:xhci_pci_probe	64	static

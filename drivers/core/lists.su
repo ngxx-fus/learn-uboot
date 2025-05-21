@@ -1,0 +1,6 @@
+drivers/core/lists.c:23:16:lists_driver_lookup_name	48	static
+drivers/core/lists.c:39:23:lists_uclass_lookup	0	static
+drivers/core/lists.c:109:5:lists_bind_drivers	128	static
+drivers/core/lists.c:139:5:device_bind_driver_to_node	48	static
+drivers/core/lists.c:132:5:device_bind_driver	0	static
+drivers/core/lists.c:184:5:lists_bind_fdt	144	static

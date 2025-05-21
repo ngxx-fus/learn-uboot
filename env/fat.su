@@ -1,0 +1,4 @@
+env/fat.c:36:20:env_fat_get_intf	0	static
+env/fat.c:41:14:env_fat_get_dev_part	32	static
+env/fat.c:60:12:env_fat_save	16656	static
+env/fat.c:114:12:env_fat_load	16656	static

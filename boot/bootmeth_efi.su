@@ -1,0 +1,7 @@
+boot/bootmeth_efi.c:423:12:distro_bootmeth_efi_bind	16	static
+boot/bootmeth_efi.c:375:5:distro_efi_boot	272	static
+boot/bootmeth_efi.c:143:12:distro_efi_check	32	static
+boot/bootmeth_efi.c:166:12:distro_efi_get_fdt_name.constprop	32	static
+boot/bootmeth_efi.c:281:12:distro_efi_read_bootflow_net	480	static
+boot/bootmeth_efi.c:212:12:distro_efi_read_bootflow_file	336	static
+boot/bootmeth_efi.c:355:12:distro_efi_read_bootflow	32	static

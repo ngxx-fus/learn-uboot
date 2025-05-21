@@ -1,0 +1,65 @@
+config NF2711
+	bool "NgxxFus NF2711 SoC support (32/64-bit)"
+	depends on ARCH_NF271X
+
+config NF2711_32B
+	bool "NGXXFUS NF2711 SoC 32-bit support"
+	depends on ARCH_NF271X
+	select NF2711
+	select ARMV7_LPAE
+	select CPU_V7A
+	select PHYS_64BIT
+
+
+config NF2711_64B
+	bool "NGXXFUS NF2711 SoC 64-bit support"
+	depends on ARCH_NF271X
+	select NF2711
+	select ARM64
+
+menu "NGXXFUS NF271X family"
+	depends on ARCH_NF271X
+choice
+	prompt "Ngxxfus NF271X board select"
+	optional
+
+config TARGET_MYRPI4CP_32
+	bool "MYRPI4CP_32 build (32-bit)"
+	help
+        NEW BOARD 32BIT WITH NF2711!
+
+    select NF2711_32B
+	imply OF_HAS_PRIOR_STAGE
+
+config TARGET_MYRPI4CP
+	bool "MYRPI4CP build (64-bit)"
+	help
+        NEW BOARD 64BIT WITH NF2711!
+    select NF2711_64B
+    select MMC
+    select MMC_SDHCI
+    select MMC_SDHCI_NF2711
+    select DM_SERIAL
+	imply OF_HAS_PRIOR_STAGE
+
+endchoice
+
+endmenu
+
+
+config SYS_BOARD
+    string
+    default "myrpi4cp"
+
+config SYS_VENDOR
+    string
+    default "ngxxfus"
+
+config SYS_CONFIG_NAME
+    string
+    default "myrpi4cp"
+
+config SYS_SOC
+	default "nf271x"
+
+source "board/ngxxfus/myrpi4cp/Kconfig"

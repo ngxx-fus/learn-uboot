@@ -1,0 +1,2 @@
+drivers/pci/pci_common.c:19:13:pci_class_str	0	static
+drivers/pci/pci_common.c:82:12:pci_skip_dev	0	static

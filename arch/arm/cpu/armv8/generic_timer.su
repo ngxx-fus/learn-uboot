@@ -1,0 +1,5 @@
+arch/arm/cpu/armv8/generic_timer.c:20:23:get_tbclk	0	static
+arch/arm/cpu/armv8/generic_timer.c:81:23:timer_read_counter	0	static
+arch/arm/cpu/armv8/generic_timer.c:92:18:get_ticks	0	static
+arch/arm/cpu/armv8/generic_timer.c:101:15:usec2ticks	0	static
+arch/arm/cpu/armv8/generic_timer.c:112:7:timer_get_boot_us	16	static

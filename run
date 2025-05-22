@@ -1,0 +1,12 @@
+#! /bin/sh
+
+my_vender=ngxxfus
+my_board=myrpi4cp
+target=myrpi4cp_defconfig
+# target=rpi_4_defconfig
+
+clear;
+
+make -j8 distclean ;
+make -j8 ARCH=arm CROSS_COMPILE=aarch64-linux-gnu-  $target; 
+make -j8 ARCH=arm CROSS_COMPILE=aarch64-linux-gnu-  ;

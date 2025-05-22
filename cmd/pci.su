@@ -1,0 +1,7 @@
+cmd/pci.c:457:13:pci_show_regions	80	static
+cmd/pci.c:45:12:pci_field_width	0	static
+cmd/pci.c:50:13:pci_show_regs	80	static
+cmd/pci.c:231:13:pci_header_show	48	static
+cmd/pci.c:289:13:pciinfo	112	static
+cmd/pci.c:392:12:pci_cfg_modify.isra	112	static
+cmd/pci.c:494:12:do_pci	160	static

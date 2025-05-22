@@ -1,0 +1,2 @@
+arch/arm/mach-nf271x/mbox.c:17:5:nf2711_mbox_call_raw	80	static
+arch/arm/mach-nf271x/mbox.c:105:5:nf2711_mbox_call_prop	64	static

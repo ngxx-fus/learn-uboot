@@ -3,11 +3,6 @@
  * (C) Copyright 2012-2016 Stephen Warren
  */
 
-#ifdef CONFIG_SHOW_DEBUG_MESSAGE
-#pragma message ("[Build] include/configs/rpi.h")
-#endif
-
-
 #ifndef __CONFIG_H
 #define __CONFIG_H
 

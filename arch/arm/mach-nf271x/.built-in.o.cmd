@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-nf271x/built-in.o :=  rm -f arch/arm/mach-nf271x/built-in.o; aarch64-linux-gnu-ar cDPrsT arch/arm/mach-nf271x/built-in.o arch/arm/mach-nf271x/init.o arch/arm/mach-nf271x/reset.o arch/arm/mach-nf271x/mbox.o arch/arm/mach-nf271x/msg.o arch/arm/mach-nf271x/phys2bus.o

@@ -59,9 +59,6 @@ obj-$(CONFIG_MMC_SDHCI)			+= sdhci.o
 obj-$(CONFIG_MMC_SDHCI_ASPEED)		+= aspeed_sdhci.o
 obj-$(CONFIG_MMC_SDHCI_ATMEL)		+= atmel_sdhci.o
 obj-$(CONFIG_MMC_SDHCI_BCM2835)		+= bcm2835_sdhci.o
-####################################NGXXFUS-MODIFY################################
-obj-$(CONFIG_MMC_SDHCI_NF2711)		+= nf2711_sdhci.o
-####################################NGXXFUS-MODIFY################################
 obj-$(CONFIG_MMC_SDHCI_BCMSTB)		+= bcmstb_sdhci.o
 obj-$(CONFIG_MMC_SDHCI_CADENCE)		+= sdhci-cadence.o
 obj-$(CONFIG_MMC_SDHCI_AM654)		+= am654_sdhci.o

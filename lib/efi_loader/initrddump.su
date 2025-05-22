@@ -1,0 +1,9 @@
+lib/efi_loader/initrddump.c:69:13:print	0	static
+lib/efi_loader/initrddump.c:103:13:printx	48	static
+lib/efi_loader/initrddump.c:126:13:efi_drain_input	0	static
+lib/efi_loader/initrddump.c:58:13:color	0	static
+lib/efi_loader/initrddump.c:90:13:error	32	static
+lib/efi_loader/initrddump.c:279:21:get_initrd	96	static
+lib/efi_loader/initrddump.c:77:13:cls	0	static
+lib/efi_loader/initrddump.c:250:13:starts_with	0	static
+lib/efi_loader/initrddump.c:469:21:efi_main	304	static

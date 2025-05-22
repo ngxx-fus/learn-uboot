@@ -1,0 +1,5 @@
+drivers/pci/pci_auto.c:197:13:dm_pciauto_exp_link_stable	80	static
+drivers/pci/pci_auto.c:24:13:dm_pciauto_setup_device	128	static
+drivers/pci/pci_auto.c:347:6:dm_pciauto_prescan_setup_bridge	112	static
+drivers/pci/pci_auto.c:452:6:dm_pciauto_postscan_setup_bridge	80	static
+drivers/pci/pci_auto.c:521:5:dm_pciauto_config_device	80	static

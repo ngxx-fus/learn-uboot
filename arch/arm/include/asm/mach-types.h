@@ -5050,9 +5050,4 @@
 #define MACH_TYPE_NASM25               5112
 #define MACH_TYPE_TOMATO               5113
 #define MACH_TYPE_OMAP3_MRC3D          5114
-
-/// ####################################NGXXFUS-MODIFY################################ ///
-#define MACH_TYPE_MYRPI4CP             5115
-/// ####################################NGXXFUS-MODIFY################################ ///
-
 #endif

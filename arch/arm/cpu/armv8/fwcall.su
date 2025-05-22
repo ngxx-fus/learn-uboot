@@ -1,0 +1,4 @@
+arch/arm/cpu/armv8/fwcall.c:55:6:smc_call	16	static
+arch/arm/cpu/armv8/fwcall.c:87:17:psci_system_reset	288	static
+arch/arm/cpu/armv8/fwcall.c:102:17:psci_system_reset2	288	static
+arch/arm/cpu/armv8/fwcall.c:118:17:psci_system_off	288	static

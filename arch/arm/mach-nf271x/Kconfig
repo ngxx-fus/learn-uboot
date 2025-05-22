@@ -1,5 +1,3 @@
-source "board/ngxxfus/myrpi4cp/Kconfig"
-
 config NF2711
 	bool "NgxxFus NF2711 SoC support (32/64-bit)"
 	depends on ARCH_NF271X
@@ -63,3 +61,5 @@ config SYS_CONFIG_NAME
 
 config SYS_SOC
 	default "nf271x"
+
+source "board/ngxxfus/myrpi4cp/Kconfig"

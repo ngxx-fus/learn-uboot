@@ -1,0 +1,1 @@
+drivers/rng/rng-uclass.c:12:5:dm_rng_read	0	static

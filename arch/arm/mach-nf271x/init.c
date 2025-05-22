@@ -6,9 +6,7 @@
  * project.
  */
 
-#ifdef CONFIG_SHOW_DEBUG_MESSAGE
 #pragma message ("[Build] arch/arm/mach-nf2711/init.c")
-#endif
 
 #include <common.h>
 #include <cpu_func.h>

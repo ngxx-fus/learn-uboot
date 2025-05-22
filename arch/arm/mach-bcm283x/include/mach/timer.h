@@ -3,10 +3,6 @@
  * (C) Copyright 2012,2015 Stephen Warren
  */
 
-#ifdef CONFIG_SHOW_DEBUG_MESSAGE
-#pragma message ("[Build] arch/arm/include/asm/arch/timer.h")
-#endif
- 
 #ifndef _BCM2835_TIMER_H
 #define _BCM2835_TIMER_H
 

@@ -1,6 +1,7 @@
+
 if SYS_BOARD = "myrpi4cp"
 
-	config RPI_EFI_NR_SPIN_PAGES
+	config MYRPI4CP_EFI_NR_SPIN_PAGES
 		int "[myrpi4cp/Kconfig] Spin table page count"
 		default 1
 		help

@@ -9,10 +9,6 @@
  * Wolfgang Denk, DENX Software Engineering, wd@denx.de.
  */
 
-#ifdef CONFIG_SHOW_DEBUG_MESSAGE
-#pragma message ("[Build] include/common.h")
-#endif
-
 #ifndef __COMMON_H_
 #define __COMMON_H_	1
 

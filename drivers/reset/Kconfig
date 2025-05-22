@@ -196,7 +196,7 @@ config RESET_SYSCON
 
 config RESET_RASPBERRYPI
 	bool "Raspberry Pi 4 Firmware Reset Controller Driver"
-	depends on DM_RESET && ARCH_BCM283X 
+	depends on DM_RESET && ARCH_BCM283X
 	default USB_XHCI_PCI
 	help
 	  Raspberry Pi 4's co-processor controls some of the board's HW
@@ -204,20 +204,6 @@ config RESET_RASPBERRYPI
 	  relevant. This driver provides a reset controller capable of
 	  interfacing with RPi4's co-processor and model these firmware
 	  initialization routines as reset lines.
-
-####################################NGXXFUS-MODIFY################################
-config RESET_NGXXFUS
-	bool "NgxxFus MYPI4 Firmware Reset Controller Driver"
-	depends on DM_RESET && ARCH_NF271X
-	default USB_XHCI_PCI
-	help
-	  Raspberry Pi 4's co-processor controls some of the board's HW
-	  initialization process, but it's up to Linux to trigger it when
-	  relevant. This driver provides a reset controller capable of
-	  interfacing with RPi4's co-processor and model these firmware
-	  initialization routines as reset lines.
-####################################NGXXFUS-MODIFY################################
-
 
 config RESET_SCMI
 	bool "Enable SCMI reset domain driver"

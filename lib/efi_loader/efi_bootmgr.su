@@ -1,0 +1,3 @@
+lib/efi_loader/efi_bootmgr.c:89:21:try_load_from_file_path	112	static
+lib/efi_loader/efi_bootmgr.c:183:21:try_load_entry	160	static
+lib/efi_loader/efi_bootmgr.c:286:14:efi_bootmgr_load	80	static

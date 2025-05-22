@@ -116,7 +116,7 @@ config PSCI_RESET
 	default y
 	select ARM_SMCCC if OF_CONTROL
 ####################################NGXXFUS-MODIFY################################
-	depends on !ARCH_APPLE && !(ARCH_BCM283X || ARCH_NF271X) && !ARCH_EXYNOS7 && \
+	depends on !ARCH_APPLE && !ARCH_BCM283X && !ARCH_EXYNOS7 && \
 		   !TARGET_LS2080AQDS && \
 		   !TARGET_LS2080ARDB && !TARGET_LS2080A_EMU && \
 		   !TARGET_LS1088ARDB && !TARGET_LS1088AQDS && \
@@ -129,8 +129,9 @@ config PSCI_RESET
 		   !TARGET_LS1046AFRWY && \
 		   !TARGET_LS2081ARDB && !TARGET_LX2160ARDB && \
 		   !TARGET_LX2160AQDS && !TARGET_LX2162AQDS && \
-		   !ARCH_UNIPHIER
+		   !ARCH_UNIPHIER && !ARCH_NF271X
 ####################################NGXXFUS-MODIFY################################
+
 	help
 	  Most armv8 systems have PSCI support enabled in EL3, either through
 	  ARM Trusted Firmware or other firmware.

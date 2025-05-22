@@ -308,19 +308,12 @@ config EFI_HAVE_RUNTIME_RESET
 	# bool "Reset runtime service is available"
 	bool
 	default y
-
-####################################NGXXFUS-MODIFY################################
 	depends on ARCH_BCM283X || FSL_LAYERSCAPE || PSCI_RESET || \
-		   SANDBOX || SYSRESET_X86 || ARCH_NF271X
-####################################NGXXFUS-MODIFY################################
+		   SANDBOX || SYSRESET_X86
 
 config EFI_GRUB_ARM32_WORKAROUND
 	bool "Workaround for GRUB on 32bit ARM"
-
-####################################NGXXFUS-MODIFY################################
-	default n if ARCH_BCM283X || ARCH_SUNXI || ARCH_QEMU || ARCH_NF271X
-####################################NGXXFUS-MODIFY################################
-
+	default n if ARCH_BCM283X || ARCH_SUNXI || ARCH_QEMU
 	default y
 	depends on ARM && !ARM64
 	help

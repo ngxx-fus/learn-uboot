@@ -3,9 +3,6 @@
  * (C) Copyright 2012-2016 Stephen Warren
  */
 
-#pragma message ("[Build] board/raspberrypi/rpi/rpi.c")
-
-
 #include <common.h>
 #include <config.h>
 #include <dm.h>

@@ -30,7 +30,11 @@
         "raspberrypi,firmware-reset.h": "c",
         "ngxxfus,firmware-reset.h": "c",
         "typeinfo": "c",
-        "system.h": "c"
+        "system.h": "c",
+        "malloc.h": "c",
+        "gpio.h": "c",
+        "serial_nf271x_mu.h": "c",
+        "serial_pl01x_internal.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled",
     "git.ignoreLimitWarning": true

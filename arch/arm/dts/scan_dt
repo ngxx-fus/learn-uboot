@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Đang tìm các dòng 'compatible' trong tất cả các file .dts và .dtsi..."
+echo "------------------------------------------------------------"
+
+find . -type f \( -name "*.dts" -o -name "*.dtsi" \) -exec grep -H 'compatible' {} \; | \
+sed 's#.*= "\(.*\)";#\1#' | \
+tr ',' '\n' | \
+sed 's#^[[:space:]]*##;s#[[:space:]]*$##' | \
+sort | uniq
+
+
+echo "------------------------------------------------------------"
+echo "Hoàn tất!"
+

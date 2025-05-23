@@ -63,6 +63,7 @@ deps_config := \
 	drivers/tpm/Kconfig \
 	drivers/timer/Kconfig \
 	drivers/thermal/Kconfig \
+	drivers/tee/ngxxfus/Kconfig \
 	drivers/tee/broadcom/Kconfig \
 	drivers/tee/optee/Kconfig \
 	drivers/tee/Kconfig \
@@ -112,6 +113,7 @@ deps_config := \
 	drivers/pinctrl/intel/Kconfig \
 	drivers/pinctrl/exynos/Kconfig \
 	drivers/pinctrl/broadcom/Kconfig \
+	drivers/pinctrl/ngxxfus/Kconfig \
 	drivers/pinctrl/Kconfig \
 	drivers/phy/socionext/Kconfig \
 	drivers/phy/marvell/Kconfig \
@@ -915,13 +917,13 @@ include/config/auto.conf: \
 ifneq "$(UBOOTVERSION)" "2023.07.02"
 include/config/auto.conf: FORCE
 endif
-ifneq "$(CC_VERSION_TEXT)" "aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"
+ifneq "$(CC_VERSION_TEXT)" "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"
 include/config/auto.conf: FORCE
 endif
 ifneq "$(srctree)" "."
 include/config/auto.conf: FORCE
 endif
-ifneq "$(CC)" "aarch64-linux-gnu-gcc"
+ifneq "$(CC)" "gcc"
 include/config/auto.conf: FORCE
 endif
 

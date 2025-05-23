@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-2.0
 /dts-v1/;
-#include "bcm2711.dtsi"
-#include "bcm2711-rpi.dtsi"
+#include "nf2711.dtsi"
+#include "nf2711-rpi.dtsi"
 #include "nf271x-rpi-usb-peripheral.dtsi"
 
 / {
-	compatible = "raspberrypi,4-model-b", "brcm,bcm2711";
-	model = "Raspberry Pi 4 Model B";
+	compatible = "ngxxfus,myrpi4cp", "ngxxfus,nf2711";
+	model = "myrpi4cp";
 
 	chosen {
 		/* 8250 auxiliary UART instead of pl011 */
@@ -189,9 +189,9 @@
 	mmc-pwrseq = <&wifi_pwrseq>;
 	status = "okay";
 
-	brcmf: wifi@1 {
+	ngxxfusf: wifi@1 {
 		reg = <1>;
-		compatible = "brcm,bcm4329-fmac";
+		compatible = "ngxxfus,bcm4329-fmac";
 	};
 };
 
@@ -227,7 +227,7 @@
 
 		usb@0,0 {
 			reg = <0 0 0 0 0>;
-			resets = <&reset RASPBERRYPI_FIRMWARE_RESET_ID_USB>;
+			resets = <&reset NGXXFUS_FIRMWARE_RESET_ID_USB>;
 		};
 	};
 };
@@ -240,7 +240,7 @@
 	status = "okay";
 
 	bluetooth {
-		compatible = "brcm,bcm43438-bt";
+		compatible = "ngxxfus,bcm43438-bt";
 		max-speed = <2000000>;
 		shutdown-gpios = <&expgpio 0 GPIO_ACTIVE_HIGH>;
 	};

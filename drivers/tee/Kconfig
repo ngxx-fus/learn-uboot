@@ -30,6 +30,7 @@ config SANDBOX_TEE
 
 source "drivers/tee/optee/Kconfig"
 source "drivers/tee/broadcom/Kconfig"
+source "drivers/tee/ngxxfus/Kconfig"
 
 endmenu
 

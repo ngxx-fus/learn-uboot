@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0
-#include "nf2711-rpi.dtsi"
+#include "nf2715-rpi.dtsi"
 
-#include <dt-bindings/reset/raspberrypi,firmware-reset.h>
+#include <dt-bindings/reset/ngxxfus,firmware-reset.h>
 
 / {
 	/* Will be filled by the bootloader */
@@ -20,19 +20,19 @@
 
 &firmware {
 	firmware_clocks: clocks {
-		compatible = "raspberrypi,firmware-clocks";
+		compatible = "ngxxfus,firmware-clocks";
 		#clock-cells = <1>;
 	};
 
 	expgpio: gpio {
-		compatible = "raspberrypi,firmware-gpio";
+		compatible = "ngxxfus,firmware-gpio";
 		gpio-controller;
 		#gpio-cells = <2>;
 		status = "okay";
 	};
 
 	reset: reset {
-		compatible = "raspberrypi,firmware-reset";
+		compatible = "ngxxfus,firmware-reset";
 		#reset-cells = <1>;
 	};
 };
@@ -60,7 +60,7 @@
 	 * its placement information.
 	 */
 	blconfig: nvram@0 {
-		compatible = "raspberrypi,bootloader-config", "nvmem-rmem";
+		compatible = "ngxxfus,bootloader-config", "nvmem-rmem";
 		#address-cells = <1>;
 		#size-cells = <1>;
 		reg = <0x0 0x0 0x0>;

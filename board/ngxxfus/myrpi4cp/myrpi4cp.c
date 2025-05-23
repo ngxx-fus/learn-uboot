@@ -3,8 +3,6 @@
  * (C) Copyright 2012-2016 Stephen Warren
  */
 
-
- 
 #include <common.h>
 #include <config.h>
 #include <dm.h>
@@ -72,7 +70,7 @@ struct msg_get_clock_rate
 };
 
 #ifdef CONFIG_ARM64
-#define DTB_DIR "broadcom/"
+#define DTB_DIR "ngxxfus/"
 #else
 #define DTB_DIR ""
 #endif
@@ -160,7 +158,7 @@ static const struct rpi_model rpi_models_new_scheme[] = {
 		false,
 	},
 	[0x11] = {
-		"4 Model B",
+		"myrpi4cp",
 		DTB_DIR "nf2711-rpi-4-b.dtb",
 		true,
 	},

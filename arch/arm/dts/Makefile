@@ -1203,6 +1203,22 @@ dtb-$(CONFIG_ARCH_BCM283X) += \
 dtb-$(CONFIG_ARCH_NF271X) += \
 	nf2711-rpi-4-b.dtb
 
+# dtb-$(CONFIG_ARCH_NF271X) += \
+# 	bcm2835-rpi-a.dtb \
+# 	bcm2835-rpi-a-plus.dtb \
+# 	bcm2835-rpi-b.dtb \
+# 	bcm2835-rpi-b-plus.dtb \
+# 	bcm2835-rpi-b-rev2.dtb \
+# 	bcm2835-rpi-cm1-io1.dtb \
+# 	bcm2835-rpi-zero.dtb \
+# 	bcm2835-rpi-zero-w.dtb\
+# 	bcm2836-rpi-2-b.dtb \
+# 	bcm2837-rpi-3-a-plus.dtb \
+# 	bcm2837-rpi-3-b.dtb \
+# 	bcm2837-rpi-3-b-plus.dtb \
+# 	bcm2837-rpi-cm3-io3.dtb \
+# 	bcm2711-rpi-4-b.dtb
+
 dtb-$(CONFIG_TARGET_BCMNS) += ns-board.dtb
 
 dtb-$(CONFIG_TARGET_BCMNS3) += ns3-board.dtb

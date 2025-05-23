@@ -58,7 +58,10 @@ obj-$(CONFIG_NEXELL_DWMMC) += nexell_dw_mmc.o
 obj-$(CONFIG_MMC_SDHCI)			+= sdhci.o
 obj-$(CONFIG_MMC_SDHCI_ASPEED)		+= aspeed_sdhci.o
 obj-$(CONFIG_MMC_SDHCI_ATMEL)		+= atmel_sdhci.o
+
 obj-$(CONFIG_MMC_SDHCI_BCM2835)		+= bcm2835_sdhci.o
+obj-$(CONFIG_MMC_SDHCI_NF2711)		+= nf2711_sdhci.o
+
 obj-$(CONFIG_MMC_SDHCI_BCMSTB)		+= bcmstb_sdhci.o
 obj-$(CONFIG_MMC_SDHCI_CADENCE)		+= sdhci-cadence.o
 obj-$(CONFIG_MMC_SDHCI_AM654)		+= am654_sdhci.o
@@ -80,6 +83,9 @@ obj-$(CONFIG_MMC_SUNXI)			+= sunxi_mmc.o
 obj-$(CONFIG_MMC_PITON)			+= piton_mmc.o
 obj-$(CONFIG_MMC_UNIPHIER)		+= tmio-common.o uniphier-sd.o
 obj-$(CONFIG_RENESAS_SDHI)		+= tmio-common.o renesas-sdhi.o
+
 obj-$(CONFIG_MMC_BCM2835)		+= bcm2835_sdhost.o
+obj-$(CONFIG_MMC_BF2711)		+= nf2711_sdhost.o
+
 obj-$(CONFIG_MMC_MTK)			+= mtk-sd.o
 obj-$(CONFIG_MMC_SDHCI_F_SDH30)		+= f_sdh30.o

@@ -11,15 +11,15 @@
 		compatible = "u-boot,sysinfo-smbios";
 		smbios {
 			system {
-				manufacturer = "raspberrypi";
-				product = "rpi";
+				manufacturer = "ngxxfus";
+				product = "myrpi4cp";
 			};
 			baseboard {
-				manufacturer = "raspberrypi";
-				product = "rpi";
+				manufacturer = "ngxxfus";
+				product = "myrpi4cp";
 			};
 			chassis {
-				manufacturer = "raspberrypi";
+				manufacturer = "ngxxfus";
 			};
 		};
 	};

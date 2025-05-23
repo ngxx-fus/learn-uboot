@@ -1,0 +1,4 @@
+drivers/pinctrl/ngxxfus/pinctrl-nf271x.c:63:5:nf271x_pinctrl_set_state	176	static
+drivers/pinctrl/ngxxfus/pinctrl-nf271x.c:92:12:nf271x_pinctrl_get_gpio_mux	32	static
+drivers/pinctrl/ngxxfus/pinctrl-nf271x.c:107:5:nf271x_pinctl_of_to_plat	32	static
+drivers/pinctrl/ngxxfus/pinctrl-nf271x.c:122:5:nf271x_pinctl_probe	48	static

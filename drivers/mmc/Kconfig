@@ -435,6 +435,21 @@ config MMC_BCM2835
 
 	  If unsure, say N.
 
+config MMC_NF2711
+	bool "NF2711 family custom SD/MMC Host Controller support"
+	depends on ARCH_NF271X
+	depends on BLK && DM_MMC
+	depends on OF_CONTROL
+	default y
+	help
+	  This selects support for the custom SD host controller in the NF2711
+	  family of devices.
+
+	  If you have a NF2711 platform with SD or MMC devices, say Y here.
+
+	  If unsure, say N.
+
+
 config JZ47XX_MMC
 	bool "Ingenic JZ47xx SD/MMC Host Controller support"
 	depends on ARCH_JZ47XX
@@ -536,6 +551,20 @@ config MMC_SDHCI_ATMEL
 	  Memory Card Specification V3.0, and the SDIO V3.0 specification.
 	  It is compliant with the SD Host Controller Standard V3.0
 	  specification.
+
+config MMC_SDHCI_NF2711
+	tristate "SDHCI support for the NF2711 SD/MMC Controller"
+	depends on ARCH_NF271X
+	depends on MMC_SDHCI
+	select MMC_SDHCI_IO_ACCESSORS
+	help
+	  This selects the NF2711 SD/MMC controller.
+
+	  If you have a NF2711 platform with SD or MMC devices,
+	  say Y here.
+
+	  If unsure, say N.
+
 
 config MMC_SDHCI_BCM2835
 	tristate "SDHCI support for the BCM2835 SD/MMC Controller"

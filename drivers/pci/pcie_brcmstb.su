@@ -1,0 +1,7 @@
+drivers/pci/pcie_brcmstb.c:243:12:brcm_pcie_write_config	0	static
+drivers/pci/pcie_brcmstb.c:204:12:brcm_pcie_config_address	48	static
+drivers/pci/pcie_brcmstb.c:575:12:brcm_pcie_remove	16	static
+drivers/pci/pcie_brcmstb.c:235:12:brcm_pcie_read_config	0	static
+drivers/pci/pcie_brcmstb.c:593:12:brcm_pcie_of_to_plat	64	static
+drivers/pci/pcie_brcmstb.c:313:12:brcm_pcie_mdio_write.constprop	32	static
+drivers/pci/pcie_brcmstb.c:424:12:brcm_pcie_probe	112	static

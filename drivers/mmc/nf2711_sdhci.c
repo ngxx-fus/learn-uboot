@@ -45,8 +45,8 @@
 #include <time.h>
 #include <asm/arch/msg.h>
 #include <asm/arch/mbox.h>
-#include <asm/arch/sdhci.h>
-#include <asm/arch/timer.h>
+#include <mach/sdhci.h>
+#include <mach/timer.h>
 
 /* 400KHz is max freq for card ID etc. Use that as min */
 #define MIN_FREQ 400000
@@ -234,11 +234,11 @@ static int nf2711_sdhci_probe(struct udevice *dev)
 
 static const struct udevice_id nf2711_sdhci_match[] = {
 	{
-		.compatible = "brcm,nf2711-sdhci",
+		.compatible = "ngxxfus,nf2711-sdhci",
 		.data = NF2711_MBOX_CLOCK_ID_EMMC
 	},
 	{
-		.compatible = "brcm,bcm2711-emmc2",
+		.compatible = "ngxxfus,bcm2711-emmc2",
 		.data = NF2711_MBOX_CLOCK_ID_EMMC2
 	},
 	{ /* sentinel */ }

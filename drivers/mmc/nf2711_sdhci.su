@@ -1,0 +1,8 @@
+drivers/mmc/nf2711_sdhci.c:131:12:nf2711_sdhci_readl	0	static
+drivers/mmc/nf2711_sdhci.c:138:12:nf2711_sdhci_readw	0	static
+drivers/mmc/nf2711_sdhci.c:148:11:nf2711_sdhci_readb	0	static
+drivers/mmc/nf2711_sdhci.c:99:13:nf2711_sdhci_writel	48	static
+drivers/mmc/nf2711_sdhci.c:104:13:nf2711_sdhci_writew	48	static
+drivers/mmc/nf2711_sdhci.c:120:13:nf2711_sdhci_writeb	48	static
+drivers/mmc/nf2711_sdhci.c:174:12:nf2711_sdhci_probe	64	static
+drivers/mmc/nf2711_sdhci.c:167:12:nf2711_sdhci_bind	32	static

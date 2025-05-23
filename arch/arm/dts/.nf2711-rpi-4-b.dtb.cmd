@@ -22,19 +22,19 @@ deps_arch/arm/dts/nf2711-rpi-4-b.dtb := \
     $(wildcard include/config/tpl/acme.h) \
     $(wildcard include/config/if/enabled/int.h) \
     $(wildcard include/config/int/option.h) \
-  arch/arm/dts/bcm2711.dtsi \
-  arch/arm/dts/bcm283x.dtsi \
-  include/dt-bindings/pinctrl/bcm2835.h \
-  include/dt-bindings/clock/bcm2835.h \
-  include/dt-bindings/clock/bcm2835-aux.h \
+  arch/arm/dts/nf2711.dtsi \
+  arch/arm/dts/nf271x.dtsi \
+  include/dt-bindings/pinctrl/nf2711.h \
+  include/dt-bindings/clock/nf2711.h \
+  include/dt-bindings/clock/nf2711-aux.h \
   include/dt-bindings/gpio/gpio.h \
   include/dt-bindings/interrupt-controller/irq.h \
-  include/dt-bindings/soc/bcm2835-pm.h \
+  include/dt-bindings/soc/nf2711-pm.h \
   include/dt-bindings/interrupt-controller/arm-gic.h \
-  arch/arm/dts/bcm2711-rpi.dtsi \
-  arch/arm/dts/bcm2835-rpi.dtsi \
-  include/dt-bindings/power/raspberrypi-power.h \
-  include/dt-bindings/reset/raspberrypi,firmware-reset.h \
+  arch/arm/dts/nf2711-rpi.dtsi \
+  arch/arm/dts/nf2715-rpi.dtsi \
+  include/dt-bindings/power/ngxxfus-power.h \
+  include/dt-bindings/reset/ngxxfus,firmware-reset.h \
   arch/arm/dts/nf271x-rpi-usb-peripheral.dtsi \
   arch/arm/dts/nf271x-u-boot.dtsi \
 

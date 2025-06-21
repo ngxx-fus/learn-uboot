@@ -344,7 +344,7 @@ config PINCTRL_ZYNQMP
 
 endif
 
-source "drivers/pinctrl/ngxxfus/Kconfig"
+source "drivers/pinctrl/fakebroadcom/Kconfig"
 source "drivers/pinctrl/broadcom/Kconfig"
 source "drivers/pinctrl/exynos/Kconfig"
 source "drivers/pinctrl/intel/Kconfig"

@@ -1200,24 +1200,24 @@ dtb-$(CONFIG_ARCH_BCM283X) += \
 	bcm2837-rpi-cm3-io3.dtb \
 	bcm2711-rpi-4-b.dtb
 
-dtb-$(CONFIG_ARCH_NF271X) += \
-	nf2711-rpi-4-b.dtb
 
-# dtb-$(CONFIG_ARCH_NF271X) += \
-# 	bcm2835-rpi-a.dtb \
-# 	bcm2835-rpi-a-plus.dtb \
-# 	bcm2835-rpi-b.dtb \
-# 	bcm2835-rpi-b-plus.dtb \
-# 	bcm2835-rpi-b-rev2.dtb \
-# 	bcm2835-rpi-cm1-io1.dtb \
-# 	bcm2835-rpi-zero.dtb \
-# 	bcm2835-rpi-zero-w.dtb\
-# 	bcm2836-rpi-2-b.dtb \
-# 	bcm2837-rpi-3-a-plus.dtb \
-# 	bcm2837-rpi-3-b.dtb \
-# 	bcm2837-rpi-3-b-plus.dtb \
-# 	bcm2837-rpi-cm3-io3.dtb \
-# 	bcm2711-rpi-4-b.dtb
+dtb-$(CONFIG_ARCH_NF283X) += \
+	nf2835-nfus-a.dtb \
+	nf2835-nfus-a-plus.dtb \
+	nf2835-nfus-b.dtb \
+	nf2835-nfus-b-plus.dtb \
+	nf2835-nfus-b-rev2.dtb \
+	nf2835-nfus-cm1-io1.dtb \
+	nf2835-nfus-zero.dtb \
+	nf2835-nfus-zero-w.dtb\
+	nf2836-nfus-2-b.dtb \
+	nf2837-nfus-3-a-plus.dtb \
+	nf2837-nfus-3-b.dtb \
+	nf2837-nfus-3-b-plus.dtb \
+	nf2837-nfus-cm3-io3.dtb \
+	nf2711-nfus-4-b.dtb
+
+
 
 dtb-$(CONFIG_TARGET_BCMNS) += ns-board.dtb
 

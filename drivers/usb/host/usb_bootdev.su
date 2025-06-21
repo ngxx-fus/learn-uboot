@@ -1,2 +1,0 @@
-drivers/usb/host/usb_bootdev.c:14:12:usb_bootdev_bind	16	static
-drivers/usb/host/usb_bootdev.c:23:12:usb_bootdev_hunt	0	static

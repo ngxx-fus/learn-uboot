@@ -1,2 +1,0 @@
-arch/arm/lib/bdinfo.c:16:5:arch_setup_bdinfo	0	static
-arch/arm/lib/bdinfo.c:27:6:arch_print_bdinfo	16	static

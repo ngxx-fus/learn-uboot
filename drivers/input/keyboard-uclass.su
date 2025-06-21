@@ -1,5 +1,0 @@
-drivers/input/keyboard-uclass.c:13:12:keyboard_start	0	static
-drivers/input/keyboard-uclass.c:24:12:keyboard_stop	0	static
-drivers/input/keyboard-uclass.c:65:12:keyboard_pre_probe	32	static
-drivers/input/keyboard-uclass.c:35:12:keyboard_tstc	32	static
-drivers/input/keyboard-uclass.c:50:12:keyboard_getc	32	static

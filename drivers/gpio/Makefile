@@ -43,9 +43,11 @@ obj-$(CONFIG_MPC8XX_GPIO)	+= mpc8xx_gpio.o
 obj-$(CONFIG_MPC83XX_SPISEL_BOOT)	+= mpc83xx_spisel_boot.o
 obj-$(CONFIG_SH_GPIO_PFC)	+= sh_pfc.o
 obj-$(CONFIG_OMAP_GPIO)	+= omap_gpio.o
-
 obj-$(CONFIG_BCM2835_GPIO)	+= bcm2835_gpio.o
-obj-$(CONFIG_BCM2711_GPIO)	+= bcm2711_gpio.o
+
+###############################################
+obj-$(CONFIG_NF2835_GPIO)	+= nf2835_gpio.o
+###############################################
 
 obj-$(CONFIG_XILINX_GPIO)	+= xilinx_gpio.o
 obj-$(CONFIG_TCA642X)		+= tca642x.o

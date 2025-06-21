@@ -466,6 +466,16 @@ config VIDEO_BCM2835
 	  that same resolution (or as near as possible) and 32bpp depth, so
 	  that U-Boot can access it with full colour depth.
 
+###########################################################################
+config VIDEO_NF2835
+	bool "Display support for NF2835"
+	help
+	  The graphics processor already sets up the display so this driver
+	  simply checks the resolution and then sets up the frame buffer with
+	  that same resolution (or as near as possible) and 32bpp depth, so
+	  that U-Boot can access it with full colour depth.
+###########################################################################
+
 config VIDEO_LCD_ENDEAVORU
 	tristate "Endeavoru 720x1280 DSI video mode panel"
 	depends on PANEL && BACKLIGHT

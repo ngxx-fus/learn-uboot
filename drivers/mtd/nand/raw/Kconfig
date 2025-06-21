@@ -120,6 +120,16 @@ config NAND_BRCMNAND
 	  Enable the driver for NAND flash on platforms using a Broadcom NAND
 	  controller.
 
+############################################################################
+config NAND_NFSNAND
+	bool "Support NFS NAND controller"
+	depends on OF_CONTROL && DM && DM_MTD
+	select SYS_NAND_SELF_INIT
+	help
+	  Enable the driver for NAND flash on platforms using a Broadcom NAND
+	  controller.
+############################################################################
+
 config NAND_BRCMNAND_6368
 	bool "Support Broadcom NAND controller on bcm6368"
 	depends on NAND_BRCMNAND && ARCH_BMIPS
@@ -158,7 +168,7 @@ config NAND_BRCMNAND_63158
 
 config NAND_BRCMNAND_IPROC
        bool "Support Broadcom NAND controller on the iproc family"
-       depends on NAND_BRCMNAND
+       depends on NAND_BRCMNAND || NAND_NFSNAND
        help
          Enable support for broadcom nand driver on the Broadcom
          iproc family such as Northstar (BCM5301x, BCM4708...)

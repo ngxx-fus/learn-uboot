@@ -1,5 +1,0 @@
-drivers/rng/iproc_rng200.c:155:12:iproc_rng200_of_to_plat	32	static
-drivers/rng/iproc_rng200.c:40:13:iproc_rng200_enable.isra	0	static
-drivers/rng/iproc_rng200.c:137:12:iproc_rng200_probe	16	static
-drivers/rng/iproc_rng200.c:146:12:iproc_rng200_remove	16	static
-drivers/rng/iproc_rng200.c:85:12:iproc_rng200_read	96	static

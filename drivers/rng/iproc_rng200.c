@@ -168,6 +168,7 @@ static const struct dm_rng_ops iproc_rng200_ops = {
 };
 
 static const struct udevice_id iproc_rng200_rng_match[] = {
+	{ .compatible = "nfs,nf2711-rng200", },
 	{ .compatible = "brcm,bcm2711-rng200", },
 	{ .compatible = "brcm,iproc-rng200", },
 	{},

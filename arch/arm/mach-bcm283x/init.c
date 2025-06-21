@@ -6,8 +6,6 @@
  * project.
  */
 
-#pragma message ("[Build] arch/arm/mach-bcm283x/init.c")
-
 #include <common.h>
 #include <cpu_func.h>
 #include <init.h>

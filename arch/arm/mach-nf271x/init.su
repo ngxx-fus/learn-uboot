@@ -1,2 +1,0 @@
-arch/arm/mach-nf271x/init.c:127:5:arch_cpu_init	16	static
-arch/arm/mach-nf271x/init.c:134:5:mach_cpu_init	48	static

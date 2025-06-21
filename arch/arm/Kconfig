@@ -645,9 +645,9 @@ config ARCH_BCM283X
 	imply CMD_DM
 	imply FAT_WRITE
 
-####################################NGXXFUS-MODIFY################################
-config ARCH_NF271X
-	bool "NgxxFus NF271X family"
+####################################################
+config ARCH_NF283X
+	bool "FakeBroadcom NF283X family"
 	select DM
 	select DM_GPIO
 	select DM_SERIAL
@@ -657,8 +657,8 @@ config ARCH_NF271X
 	select SERIAL_SEARCH_ALL
 	imply CMD_DM
 	imply FAT_WRITE
+####################################################
 
-####################################NGXXFUS-MODIFY################################
 
 config ARCH_BCMSTB
 	bool "Broadcom BCM7XXX family"
@@ -2187,7 +2187,9 @@ source "arch/arm/mach-at91/Kconfig"
 
 source "arch/arm/mach-bcm283x/Kconfig"
 
-source "arch/arm/mach-nf271x/Kconfig"
+###############################################
+source "arch/arm/mach-nf283x/Kconfig"
+###############################################
 
 source "arch/arm/mach-bcmbca/Kconfig"
 

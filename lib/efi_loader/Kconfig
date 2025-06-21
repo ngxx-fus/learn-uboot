@@ -304,22 +304,25 @@ config EFI_PLATFORM_LANG_CODES
 	  RFC 4646 format, e.g. "en-US;de-DE". The first language code is used
 	  to initialize the PlatformLang variable.
 
+#######################################################################
 config EFI_HAVE_RUNTIME_RESET
 	# bool "Reset runtime service is available"
 	bool
 	default y
 	depends on ARCH_BCM283X || FSL_LAYERSCAPE || PSCI_RESET || \
-		   SANDBOX || SYSRESET_X86
+		   SANDBOX || SYSRESET_X86 || ARCH_NF283X
 
 config EFI_GRUB_ARM32_WORKAROUND
 	bool "Workaround for GRUB on 32bit ARM"
-	default n if ARCH_BCM283X || ARCH_SUNXI || ARCH_QEMU
+	default n if ARCH_BCM283X || ARCH_SUNXI || ARCH_QEMU || ARCH_NF283X
 	default y
 	depends on ARM && !ARM64
 	help
 	  GRUB prior to version 2.04 requires U-Boot to disable caches. This
 	  workaround currently is also needed on systems with caches that
 	  cannot be managed via CP15.
+
+#######################################################################
 
 config EFI_RNG_PROTOCOL
 	bool "EFI_RNG_PROTOCOL support"

@@ -31,7 +31,7 @@ config WATCHDOG_TIMEOUT_MSECS
 	default 30000 if ARCH_SOCFPGA
 	default 16000 if ARCH_SUNXI
 	default 5376 if ULP_WATCHDOG
-	default 15000 if ARCH_BCM283X || ARCH_NF271X
+	default 15000 if ARCH_BCM283X || ARCH_NF283X
 	default 60000
 	help
 	  Watchdog timeout in msec
@@ -352,20 +352,15 @@ config WDT_BCM2835
 	  Enable support for the watchdog timer in Broadcom 283X SoCs such
 	  as Raspberry Pi boards.
 
-
-
-
-config WDT_NF2711
-	bool "NGXXFUS NF2711 watchdog timer support"
-	depends on WDT && ARCH_NF271X
+###########################################################################
+config WDT_NF2835
+	bool "FakeBroadcom 2835 watchdog timer support"
+	depends on WDT && ARCH_NF283X
 	default y
 	help
 	  Enable support for the watchdog timer in Broadcom 283X SoCs such
-	  as Raspberry Pi boards.
-
-
-
-
+	  as Ngxxfus Fus boards.
+############################################################################
 config XILINX_TB_WATCHDOG
 	bool "Xilinx Axi watchdog timer support"
 	depends on WDT

@@ -90,16 +90,20 @@ config ENV_IS_IN_EEPROM
 	  EEPROM which holds the environment, is reached over
 	  a pca9547 i2c mux with address 0x70, channel 3.
 
+##################################################################################
 config ENV_IS_IN_FAT
 	bool "Environment is in a FAT filesystem"
 	depends on !CHAIN_OF_TRUST
 	default y if ARCH_BCM283X
+	default y if ARCH_NF283X
 	default y if ARCH_SUNXI && MMC
 	default y if MMC_OMAP_HS && TI_COMMON_CMD_OPTIONS
 	select FS_FAT
 	select FAT_WRITE
 	help
 	  Define this if you want to use the FAT file system for the environment.
+##################################################################################
+
 
 config ENV_IS_IN_EXT4
 	bool "Environment is in a EXT4 filesystem"

@@ -1,6 +1,0 @@
-boot/bootmeth_pxe.c:138:12:extlinux_pxe_boot	128	static
-boot/bootmeth_pxe.c:26:12:extlinux_pxe_getfile	48	static
-boot/bootmeth_pxe.c:112:12:extlinux_pxe_read_file	128	static
-boot/bootmeth_pxe.c:57:12:extlinux_pxe_read_bootflow	272	static
-boot/bootmeth_pxe.c:162:12:extlinux_bootmeth_pxe_bind	16	static
-boot/bootmeth_pxe.c:42:12:extlinux_pxe_check	32	static

@@ -1,5 +1,0 @@
-drivers/core/device-remove.c:71:5:device_unbind	32	static
-drivers/core/device-remove.c:25:5:device_chld_unbind	80	static
-drivers/core/device-remove.c:133:6:device_free	32	static
-drivers/core/device-remove.c:199:5:device_remove	64	static
-drivers/core/device-remove.c:47:5:device_chld_remove	64	static

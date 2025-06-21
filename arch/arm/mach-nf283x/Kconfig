@@ -1,0 +1,219 @@
+config NF2835
+	bool "FakeBroadcom NF2835 SoC support"
+	depends on ARCH_NF283X
+	select CPU_ARM1176
+
+config NF2836
+	bool "FakeBroadcom NF2836 SoC support"
+	depends on ARCH_NF283X
+	select ARMV7_LPAE
+	select CPU_V7A
+
+config NF2837
+	bool "FakeBroadcom NF2837 SoC support"
+	depends on ARCH_NF283X
+
+config NF2837_32B
+	bool "FakeBroadcom NF2837 SoC 32-bit support"
+	depends on ARCH_NF283X
+	select NF2837
+	select ARMV7_LPAE
+	select CPU_V7A
+
+config NF2837_64B
+	bool "FakeBroadcom NF2837 SoC 64-bit support"
+	depends on ARCH_NF283X
+	select NF2837
+	select ARM64
+
+config NF2711
+	bool "FakeBroadcom NF2711 SoC support"
+	depends on ARCH_NF283X
+
+config NF2711_32B
+	bool "FakeBroadcom NF2711 SoC 32-bit support"
+	depends on ARCH_NF283X
+	select NF2711
+	select ARMV7_LPAE
+	select CPU_V7A
+	select PHYS_64BIT
+
+config NF2711_64B
+	bool "FakeBroadcom NF2711 SoC 64-bit support"
+	depends on ARCH_NF283X
+	select NF2711
+	select ARM64
+
+menu "FakeBroadcom NF283X family"
+	depends on ARCH_NF283X
+
+choice
+	prompt "FakeBroadcom NF283X board select"
+	optional
+
+config TARGET_NFUS
+	bool "Ngxxfus Fus (all NF2835 variants)"
+	help
+	  Support for all ARM1176-/NF2835-based Ngxxfus Fus variants, such as
+	  the A, A+, B, B+, Compute Module, and Zero. This option cannot
+	  support NF2836/NF2837-based Ngxxfus Fuss such as the NFUS 2 and
+	  Nfus 3 due to different peripheral address maps.
+
+	  This option creates a build targeting the ARM1176 ISA.
+	select NF2835
+
+config TARGET_NFUS_0_W
+	bool "Ngxxfus Fus Zero W"
+	help
+	  Support for all ARM1176-/NF2835-based Ngxxfus Fus variants, such as
+	  the NFus Zero model W.
+
+	  This option assumes the VideoCore firmware is configured to use the
+	  mini UART (rather than PL011) for the serial console. This is the
+	  default on the NFus Zero W. To enable the UART console, the following
+	  non-default option must be present in config.txt: enable_uart=1.
+	  This is required for U-Boot to operate correctly, even if you only
+	  care about the HDMI/usbkbd console.
+
+	  This option creates a build targeting the ARMv7/AArch32 ISA.
+	select NF2835
+
+config TARGET_NFUS_2
+	bool "Ngxxfus Fus 2"
+	help
+	  Support for all NF2836-based Ngxxfus Fus variants, such as
+	  the NFus 2 model B.
+
+	  This option also supports NF2837-based variants such as the NFus 3
+	  Model B, when run in 32-bit mode, provided you have configured the
+	  VideoCore firmware to select the PL011 UART for the console by:
+	  a) config.txt should contain dtoverlay=pi3-miniuart-bt.
+	  b) You should run the following to tell the VC FW to process DT when
+	  booting, and copy u-boot.bin.img (rather than u-boot.bin) to the SD
+	  card as the kernel image:
+
+	       path/to/kernel/scripts/mkknlimg --dtok u-boot.bin u-boot.bin.img
+
+	  This works as of firmware.git commit 046effa13ebc "firmware:
+	  arm_loader: emmc clock depends on core clock See:
+	  https://github.com/raspberrypi/firmware/issues/572".
+
+	  This option creates a build targeting the ARMv7/AArch32 ISA.
+	select NF2836
+
+config TARGET_NFUS_3_32B
+	bool "Ngxxfus Fus 3 32-bit build"
+	help
+	  Support for all NF2837-based Ngxxfus Fus variants, such as
+	  the NFus 3 model B, in AArch32 (32-bit) mode.
+
+	  This option assumes the VideoCore firmware is configured to use the
+	  mini UART (rather than PL011) for the serial console. This is the
+	  default on the NFus 3. To enable the UART console, the following non-
+	  default option must be present in config.txt: enable_uart=1. This is
+	  required for U-Boot to operate correctly, even if you only care
+	  about the HDMI/usbkbd console.
+
+	  This option creates a build targeting the ARMv7/AArch32 ISA.
+	select NF2837_32B
+
+config TARGET_NFUS_3
+	bool "Ngxxfus Fus 3 64-bit build"
+	help
+	  Support for all NF2837-based Ngxxfus Fus variants, such as
+	  the NFus 3 model B, in AArch64 (64-bit) mode.
+
+	  This option assumes the VideoCore firmware is configured to use the
+	  mini UART (rather than PL011) for the serial console. This is the
+	  default on the NFus 3. To enable the UART console, the following non-
+	  default option must be present in config.txt: enable_uart=1. This is
+	  required for U-Boot to operate correctly, even if you only care
+	  about the HDMI/usbkbd console.
+
+	  At the time of writing, the VC FW requires a non-default option in
+	  config.txt to request the ARM CPU boot in 64-bit mode:
+	  arm_control=0x200
+
+	  The VC FW typically provides ARM "stub" code to set up the CPU and
+	  quiesce secondary SMP CPUs. This is not currently true in 64-bit
+	  mode. In order to boot U-Boot before the VC FW is enhanced, please
+	  see the commit description for the commit which added NFus3 support
+	  for a workaround. Since the instructions are temporary, they are not
+	  duplicated here. The VC FW enhancement is tracked in
+	  https://github.com/raspberrypi/firmware/issues/579.
+
+	  This option creates a build targeting the ARMv8/AArch64 ISA.
+	select NF2837_64B
+
+config TARGET_NFUS_4_32B
+	bool "Ngxxfus Fus 4 32-bit build"
+	help
+	  Support for all NF2711-based Ngxxfus Fus variants, such as
+	  the NFus 4 model B, in AArch32 (32-bit) mode.
+
+	  This option assumes the VideoCore firmware is configured to use the
+	  mini UART (rather than PL011) for the serial console. This is the
+	  default on the NFus 4. To enable the UART console, the following non-
+	  default option must be present in config.txt: enable_uart=1. This is
+	  required for U-Boot to operate correctly, even if you only care
+	  about the HDMI/usbkbd console.
+
+	  Due to hardware incompatibilities, this can't be used with
+	  NF283/5/6/7.
+
+	  This option creates a build targeting the ARMv7/AArch32 ISA.
+	select NF2711_32B
+	imply OF_HAS_PRIOR_STAGE
+
+config TARGET_NFUS_4
+	bool "Ngxxfus Fus 4 64-bit build"
+	help
+	  Support for all NF2711-based Ngxxfus Fus variants, such as
+	  the NFus 4 model B, in AArch64 (64-bit) mode.
+
+	  This option assumes the VideoCore firmware is configured to use the
+	  mini UART (rather than PL011) for the serial console. This is the
+	  default on the NFus 4. To enable the UART console, the following non-
+	  default option must be present in config.txt: enable_uart=1. This is
+	  required for U-Boot to operate correctly, even if you only care
+	  about the HDMI/usbkbd console.
+
+	  Due to hardware incompatibilities, this can't be used with
+	  NF283/5/6/7.
+
+	  Also, due to a bug in firmware, switching to 64bit mode doesn't
+	  happen automatically based on the kernel's image filename. See
+	  https://github.com/raspberrypi/firmware/issues/1193 for more details.
+	  Until that is resolved, the configuration (config.txt) needs to
+	  explicitly set: arm_64bit=1.
+
+	  This option creates a build targeting the ARMv8/AArch64 ISA.
+	select NF2711_64B
+	imply OF_HAS_PRIOR_STAGE
+
+config TARGET_NFUS_ARM64
+	bool "Ngxxfus Fus one binary 64-bit build"
+	help
+	  Support for all armv8 based Ngxxfus Fus variants, such as
+	  the NFus 4 model B, in AArch64 (64-bit) mode.
+	select ARM64
+	imply OF_HAS_PRIOR_STAGE
+
+endchoice
+
+config SYS_BOARD
+	default "nfus"
+
+config SYS_VENDOR
+	default "ngxxfusfus"
+
+config SYS_SOC
+	default "nf283x"
+
+config SYS_CONFIG_NAME
+	default "nfus"
+
+source "board/ngxxfusfus/nfus/Kconfig"
+
+endmenu
+

@@ -1,0 +1,6 @@
+// SPDX-License-Identifier: GPL-2.0
+#include "nf2835-nfus.dtsi"
+
+&vchiq {
+	compatible = "nfs,nf2836-vchiq", "nfs,nf2835-vchiq";
+};

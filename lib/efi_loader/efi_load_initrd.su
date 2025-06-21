@@ -1,3 +1,0 @@
-lib/efi_loader/efi_load_initrd.c:92:1:efi_load_file2_initrd	80	static
-lib/efi_loader/efi_load_initrd.c:197:14:efi_initrd_register	32	static
-lib/efi_loader/efi_load_initrd.c:230:14:efi_initrd_deregister	32	static

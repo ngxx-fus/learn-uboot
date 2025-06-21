@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-2.0
-#include "nf271x.dtsi"
+#include "nf283x.dtsi"
 
 #include <dt-bindings/interrupt-controller/arm-gic.h>
-#include <dt-bindings/soc/nf2711-pm.h>
+#include <dt-bindings/soc/nf2835-pm.h>
 
 / {
-	compatible = "ngxxfus,nf2711";
+	compatible = "nfs,nf2711";
 
 	#address-cells = <2>;
 	#size-cells = <1>;
@@ -13,7 +13,7 @@
 	interrupt-parent = <&gicv2>;
 
 	vc4: gpu {
-		compatible = "ngxxfus,nf2711-vc5";
+		compatible = "nfs,nf2711-vc5";
 		status = "disabled";
 	};
 
@@ -34,7 +34,7 @@
 	soc {
 		/*
 		 * Defined ranges:
-		 *   Common NF271x peripherals
+		 *   Common NF283x peripherals
 		 *   NF2711-specific peripherals
 		 *   ARM-local peripherals
 		 */
@@ -49,7 +49,7 @@
 		 * bringing up secondary cores.
 		 */
 		local_intc: local_intc@40000000 {
-			compatible = "ngxxfus,bcm2836-l1-intc";
+			compatible = "nfs,nf2836-l1-intc";
 			reg = <0x40000000 0x100>;
 		};
 
@@ -66,18 +66,18 @@
 		};
 
 		avs_monitor: avs-monitor@7d5d2000 {
-			compatible = "ngxxfus,nf2711-avs-monitor",
+			compatible = "nfs,nf2711-avs-monitor",
 				     "syscon", "simple-mfd";
 			reg = <0x7d5d2000 0xf00>;
 
 			thermal: thermal {
-				compatible = "ngxxfus,nf2711-thermal";
+				compatible = "nfs,nf2711-thermal";
 				#thermal-sensor-cells = <0>;
 			};
 		};
 
 		dma: dma@7e007000 {
-			compatible = "ngxxfus,nf2711-dma";
+			compatible = "nfs,nf2835-dma";
 			reg = <0x7e007000 0xb00>;
 			interrupts = <GIC_SPI 80 IRQ_TYPE_LEVEL_HIGH>,
 				     <GIC_SPI 81 IRQ_TYPE_LEVEL_HIGH>,
@@ -103,26 +103,26 @@
 					  "dma9",
 					  "dma10";
 			#dma-cells = <1>;
-			ngxxfus,dma-channel-mask = <0x07f5>;
+			nfs,dma-channel-mask = <0x07f5>;
 		};
 
 		pm: watchdog@7e100000 {
-			compatible = "ngxxfus,nf2711-pm", "ngxxfus,nf2711-pm-wdt";
+			compatible = "nfs,nf2835-pm", "nfs,nf2835-pm-wdt";
 			#power-domain-cells = <1>;
 			#reset-cells = <1>;
 			reg = <0x7e100000 0x114>,
 			      <0x7e00a000 0x24>,
 			      <0x7ec11000 0x20>;
-			clocks = <&clocks NF2711_CLOCK_V3D>,
-				 <&clocks NF2711_CLOCK_PERI_IMAGE>,
-				 <&clocks NF2711_CLOCK_H264>,
-				 <&clocks NF2711_CLOCK_ISP>;
+			clocks = <&clocks NF2835_CLOCK_V3D>,
+				 <&clocks NF2835_CLOCK_PERI_IMAGE>,
+				 <&clocks NF2835_CLOCK_H264>,
+				 <&clocks NF2835_CLOCK_ISP>;
 			clock-names = "v3d", "peri_image", "h264", "isp";
 			system-power-controller;
 		};
 
 		rng@7e104000 {
-			compatible = "ngxxfus,nf2711-rng200";
+			compatible = "nfs,nf2711-rng200";
 			reg = <0x7e104000 0x28>;
 		};
 
@@ -130,8 +130,8 @@
 			compatible = "arm,pl011", "arm,primecell";
 			reg = <0x7e201400 0x200>;
 			interrupts = <GIC_SPI 121 IRQ_TYPE_LEVEL_HIGH>;
-			clocks = <&clocks NF2711_CLOCK_UART>,
-				 <&clocks NF2711_CLOCK_VPU>;
+			clocks = <&clocks NF2835_CLOCK_UART>,
+				 <&clocks NF2835_CLOCK_VPU>;
 			clock-names = "uartclk", "apb_pclk";
 			arm,primecell-periphid = <0x00241011>;
 			status = "disabled";
@@ -141,8 +141,8 @@
 			compatible = "arm,pl011", "arm,primecell";
 			reg = <0x7e201600 0x200>;
 			interrupts = <GIC_SPI 121 IRQ_TYPE_LEVEL_HIGH>;
-			clocks = <&clocks NF2711_CLOCK_UART>,
-				 <&clocks NF2711_CLOCK_VPU>;
+			clocks = <&clocks NF2835_CLOCK_UART>,
+				 <&clocks NF2835_CLOCK_VPU>;
 			clock-names = "uartclk", "apb_pclk";
 			arm,primecell-periphid = <0x00241011>;
 			status = "disabled";
@@ -152,8 +152,8 @@
 			compatible = "arm,pl011", "arm,primecell";
 			reg = <0x7e201800 0x200>;
 			interrupts = <GIC_SPI 121 IRQ_TYPE_LEVEL_HIGH>;
-			clocks = <&clocks NF2711_CLOCK_UART>,
-				 <&clocks NF2711_CLOCK_VPU>;
+			clocks = <&clocks NF2835_CLOCK_UART>,
+				 <&clocks NF2835_CLOCK_VPU>;
 			clock-names = "uartclk", "apb_pclk";
 			arm,primecell-periphid = <0x00241011>;
 			status = "disabled";
@@ -163,153 +163,153 @@
 			compatible = "arm,pl011", "arm,primecell";
 			reg = <0x7e201a00 0x200>;
 			interrupts = <GIC_SPI 121 IRQ_TYPE_LEVEL_HIGH>;
-			clocks = <&clocks NF2711_CLOCK_UART>,
-				 <&clocks NF2711_CLOCK_VPU>;
+			clocks = <&clocks NF2835_CLOCK_UART>,
+				 <&clocks NF2835_CLOCK_VPU>;
 			clock-names = "uartclk", "apb_pclk";
 			arm,primecell-periphid = <0x00241011>;
 			status = "disabled";
 		};
 
 		spi3: spi@7e204600 {
-			compatible = "ngxxfus,nf2711-spi";
+			compatible = "nfs,nf2835-spi";
 			reg = <0x7e204600 0x0200>;
 			interrupts = <GIC_SPI 118 IRQ_TYPE_LEVEL_HIGH>;
-			clocks = <&clocks NF2711_CLOCK_VPU>;
+			clocks = <&clocks NF2835_CLOCK_VPU>;
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
 		};
 
 		spi4: spi@7e204800 {
-			compatible = "ngxxfus,nf2711-spi";
+			compatible = "nfs,nf2835-spi";
 			reg = <0x7e204800 0x0200>;
 			interrupts = <GIC_SPI 118 IRQ_TYPE_LEVEL_HIGH>;
-			clocks = <&clocks NF2711_CLOCK_VPU>;
+			clocks = <&clocks NF2835_CLOCK_VPU>;
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
 		};
 
 		spi5: spi@7e204a00 {
-			compatible = "ngxxfus,nf2711-spi";
+			compatible = "nfs,nf2835-spi";
 			reg = <0x7e204a00 0x0200>;
 			interrupts = <GIC_SPI 118 IRQ_TYPE_LEVEL_HIGH>;
-			clocks = <&clocks NF2711_CLOCK_VPU>;
+			clocks = <&clocks NF2835_CLOCK_VPU>;
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
 		};
 
 		spi6: spi@7e204c00 {
-			compatible = "ngxxfus,nf2711-spi";
+			compatible = "nfs,nf2835-spi";
 			reg = <0x7e204c00 0x0200>;
 			interrupts = <GIC_SPI 118 IRQ_TYPE_LEVEL_HIGH>;
-			clocks = <&clocks NF2711_CLOCK_VPU>;
+			clocks = <&clocks NF2835_CLOCK_VPU>;
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
 		};
 
 		i2c3: i2c@7e205600 {
-			compatible = "ngxxfus,nf2711-i2c", "ngxxfus,nf2711-i2c";
+			compatible = "nfs,nf2711-i2c", "nfs,nf2835-i2c";
 			reg = <0x7e205600 0x200>;
 			interrupts = <GIC_SPI 117 IRQ_TYPE_LEVEL_HIGH>;
-			clocks = <&clocks NF2711_CLOCK_VPU>;
+			clocks = <&clocks NF2835_CLOCK_VPU>;
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
 		};
 
 		i2c4: i2c@7e205800 {
-			compatible = "ngxxfus,nf2711-i2c", "ngxxfus,nf2711-i2c";
+			compatible = "nfs,nf2711-i2c", "nfs,nf2835-i2c";
 			reg = <0x7e205800 0x200>;
 			interrupts = <GIC_SPI 117 IRQ_TYPE_LEVEL_HIGH>;
-			clocks = <&clocks NF2711_CLOCK_VPU>;
+			clocks = <&clocks NF2835_CLOCK_VPU>;
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
 		};
 
 		i2c5: i2c@7e205a00 {
-			compatible = "ngxxfus,nf2711-i2c", "ngxxfus,nf2711-i2c";
+			compatible = "nfs,nf2711-i2c", "nfs,nf2835-i2c";
 			reg = <0x7e205a00 0x200>;
 			interrupts = <GIC_SPI 117 IRQ_TYPE_LEVEL_HIGH>;
-			clocks = <&clocks NF2711_CLOCK_VPU>;
+			clocks = <&clocks NF2835_CLOCK_VPU>;
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
 		};
 
 		i2c6: i2c@7e205c00 {
-			compatible = "ngxxfus,nf2711-i2c", "ngxxfus,nf2711-i2c";
+			compatible = "nfs,nf2711-i2c", "nfs,nf2835-i2c";
 			reg = <0x7e205c00 0x200>;
 			interrupts = <GIC_SPI 117 IRQ_TYPE_LEVEL_HIGH>;
-			clocks = <&clocks NF2711_CLOCK_VPU>;
+			clocks = <&clocks NF2835_CLOCK_VPU>;
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
 		};
 
 		pixelvalve0: pixelvalve@7e206000 {
-			compatible = "ngxxfus,nf2711-pixelvalve0";
+			compatible = "nfs,nf2711-pixelvalve0";
 			reg = <0x7e206000 0x100>;
 			interrupts = <GIC_SPI 109 IRQ_TYPE_LEVEL_HIGH>;
 			status = "disabled";
 		};
 
 		pixelvalve1: pixelvalve@7e207000 {
-			compatible = "ngxxfus,nf2711-pixelvalve1";
+			compatible = "nfs,nf2711-pixelvalve1";
 			reg = <0x7e207000 0x100>;
 			interrupts = <GIC_SPI 110 IRQ_TYPE_LEVEL_HIGH>;
 			status = "disabled";
 		};
 
 		pixelvalve2: pixelvalve@7e20a000 {
-			compatible = "ngxxfus,nf2711-pixelvalve2";
+			compatible = "nfs,nf2711-pixelvalve2";
 			reg = <0x7e20a000 0x100>;
 			interrupts = <GIC_SPI 101 IRQ_TYPE_LEVEL_HIGH>;
 			status = "disabled";
 		};
 
 		pwm1: pwm@7e20c800 {
-			compatible = "ngxxfus,nf2711-pwm";
+			compatible = "nfs,nf2835-pwm";
 			reg = <0x7e20c800 0x28>;
-			clocks = <&clocks NF2711_CLOCK_PWM>;
-			assigned-clocks = <&clocks NF2711_CLOCK_PWM>;
+			clocks = <&clocks NF2835_CLOCK_PWM>;
+			assigned-clocks = <&clocks NF2835_CLOCK_PWM>;
 			assigned-clock-rates = <10000000>;
 			#pwm-cells = <2>;
 			status = "disabled";
 		};
 
 		pixelvalve4: pixelvalve@7e216000 {
-			compatible = "ngxxfus,nf2711-pixelvalve4";
+			compatible = "nfs,nf2711-pixelvalve4";
 			reg = <0x7e216000 0x100>;
 			interrupts = <GIC_SPI 110 IRQ_TYPE_LEVEL_HIGH>;
 			status = "disabled";
 		};
 
 		hvs: hvs@7e400000 {
-			compatible = "ngxxfus,nf2711-hvs";
+			compatible = "nfs,nf2711-hvs";
 			interrupts = <GIC_SPI 97 IRQ_TYPE_LEVEL_HIGH>;
 		};
 
 		pixelvalve3: pixelvalve@7ec12000 {
-			compatible = "ngxxfus,nf2711-pixelvalve3";
+			compatible = "nfs,nf2711-pixelvalve3";
 			reg = <0x7ec12000 0x100>;
 			interrupts = <GIC_SPI 106 IRQ_TYPE_LEVEL_HIGH>;
 			status = "disabled";
 		};
 
 		vec: vec@7ec13000 {
-			compatible = "ngxxfus,nf2711-vec";
+			compatible = "nfs,nf2711-vec";
 			reg = <0x7ec13000 0x1000>;
-			clocks = <&clocks NF2711_CLOCK_VEC>;
+			clocks = <&clocks NF2835_CLOCK_VEC>;
 			interrupts = <GIC_SPI 123 IRQ_TYPE_LEVEL_HIGH>;
 			status = "disabled";
 		};
 
 		dvp: clock@7ef00000 {
-			compatible = "ngxxfus,nf2711-dvp";
+			compatible = "nfs,nfs2711-dvp";
 			reg = <0x7ef00000 0x10>;
 			clocks = <&clk_108MHz>;
 			#clock-cells = <1>;
@@ -317,7 +317,7 @@
 		};
 
 		aon_intr: interrupt-controller@7ef00100 {
-			compatible = "ngxxfus,nf2711-l2-intc", "ngxxfus,l2-intc";
+			compatible = "nfs,nf2711-l2-intc", "nfs,l2-intc";
 			reg = <0x7ef00100 0x30>;
 			interrupts = <GIC_SPI 96 IRQ_TYPE_LEVEL_HIGH>;
 			interrupt-controller;
@@ -325,7 +325,7 @@
 		};
 
 		hdmi0: hdmi@7ef00700 {
-			compatible = "ngxxfus,nf2711-hdmi0";
+			compatible = "nfs,nf2711-hdmi0";
 			reg = <0x7ef00700 0x300>,
 			      <0x7ef00300 0x200>,
 			      <0x7ef00f00 0x80>,
@@ -358,7 +358,7 @@
 		};
 
 		ddc0: i2c@7ef04500 {
-			compatible = "ngxxfus,nf2711-hdmi-i2c";
+			compatible = "nfs,nf2711-hdmi-i2c";
 			reg = <0x7ef04500 0x100>, <0x7ef00b00 0x300>;
 			reg-names = "bsc", "auto-i2c";
 			clock-frequency = <97500>;
@@ -366,7 +366,7 @@
 		};
 
 		hdmi1: hdmi@7ef05700 {
-			compatible = "ngxxfus,nf2711-hdmi1";
+			compatible = "nfs,nf2711-hdmi1";
 			reg = <0x7ef05700 0x300>,
 			      <0x7ef05300 0x200>,
 			      <0x7ef05f00 0x80>,
@@ -399,7 +399,7 @@
 		};
 
 		ddc1: i2c@7ef09500 {
-			compatible = "ngxxfus,nf2711-hdmi-i2c";
+			compatible = "nfs,nf2711-hdmi-i2c";
 			reg = <0x7ef09500 0x100>, <0x7ef05b00 0x300>;
 			reg-names = "bsc", "auto-i2c";
 			clock-frequency = <97500>;
@@ -409,7 +409,7 @@
 
 	/*
 	 * emmc2 has different DMA constraints based on SoC revisions. It was
-	 * moved into its own bus, so as for RPi4's firmware to update them.
+	 * moved into its own bus, so as for Nfus4's firmware to update them.
 	 * The firmware will find whether the emmc2bus alias is defined, and if
 	 * so, it'll edit the dma-ranges property below accordingly.
 	 */
@@ -422,7 +422,7 @@
 		dma-ranges = <0x0 0xc0000000  0x0 0x00000000  0x40000000>;
 
 		emmc2: mmc@7e340000 {
-			compatible = "ngxxfus,nf2711-emmc2";
+			compatible = "nfs,nf2711-emmc2";
 			reg = <0x0 0x7e340000 0x100>;
 			interrupts = <GIC_SPI 126 IRQ_TYPE_LEVEL_HIGH>;
 			clocks = <&clocks NF2711_CLOCK_EMMC2>;
@@ -456,7 +456,7 @@
 	cpus: cpus {
 		#address-cells = <1>;
 		#size-cells = <0>;
-		enable-method = "ngxxfus,bcm2836-smp"; // for ARM 32-bit
+		enable-method = "nfs,nf2836-smp"; // for ARM 32-bit
 
 		cpu0: cpu@0 {
 			device_type = "cpu";
@@ -500,7 +500,7 @@
 			 <0x6 0x00000000  0x6 0x00000000  0x40000000>;
 
 		pcie0: pcie@7d500000 {
-			compatible = "ngxxfus,nf2711-pcie";
+			compatible = "nfs,nf2711-pcie";
 			reg = <0x0 0x7d500000 0x9310>;
 			device_type = "pci";
 			#address-cells = <3>;
@@ -524,11 +524,11 @@
 			 */
 			dma-ranges = <0x02000000 0x0 0x00000000 0x0 0x00000000
 				      0x0 0xc0000000>;
-			ngxxfus,enable-ssc;
+			nfs,enable-ssc;
 		};
 
 		genet: ethernet@7d580000 {
-			compatible = "ngxxfus,nf2711-genet-v5";
+			compatible = "nfs,nf2711-genet-v5";
 			reg = <0x0 0x7d580000 0x10000>;
 			#address-cells = <0x1>;
 			#size-cells = <0x1>;
@@ -537,7 +537,7 @@
 			status = "disabled";
 
 			genet_mdio: mdio@e14 {
-				compatible = "ngxxfus,genet-mdio-v5";
+				compatible = "nfs,genet-mdio-v5";
 				reg = <0xe14 0x8>;
 				reg-names = "mdio";
 				#address-cells = <0x1>;
@@ -552,7 +552,7 @@
 };
 
 &clocks {
-	compatible = "ngxxfus,nf2711-cprman";
+	compatible = "nfs,nf2711-cprman";
 };
 
 &cpu_thermal {
@@ -566,11 +566,11 @@
 
 &dsi1 {
 	interrupts = <GIC_SPI 108 IRQ_TYPE_LEVEL_HIGH>;
-	compatible = "ngxxfus,nf2711-dsi1";
+	compatible = "nfs,nf2711-dsi1";
 };
 
 &gpio {
-	compatible = "ngxxfus,nf2711-gpio";
+	compatible = "nfs,nf2711-gpio";
 	interrupts = <GIC_SPI 113 IRQ_TYPE_LEVEL_HIGH>,
 		     <GIC_SPI 114 IRQ_TYPE_LEVEL_HIGH>,
 		     <GIC_SPI 115 IRQ_TYPE_LEVEL_HIGH>,
@@ -1038,12 +1038,12 @@
 };
 
 &i2c0 {
-	compatible = "ngxxfus,nf2711-i2c", "ngxxfus,nf2711-i2c";
+	compatible = "nfs,nf2711-i2c", "nfs,nf2835-i2c";
 	interrupts = <GIC_SPI 117 IRQ_TYPE_LEVEL_HIGH>;
 };
 
 &i2c1 {
-	compatible = "ngxxfus,nf2711-i2c", "ngxxfus,nf2711-i2c";
+	compatible = "nfs,nf2711-i2c", "nfs,nf2835-i2c";
 	interrupts = <GIC_SPI 117 IRQ_TYPE_LEVEL_HIGH>;
 };
 
@@ -1095,6 +1095,6 @@
 };
 
 &vec {
-	compatible = "ngxxfus,nf2711-vec";
+	compatible = "nfs,nf2711-vec";
 	interrupts = <GIC_SPI 123 IRQ_TYPE_LEVEL_HIGH>;
 };

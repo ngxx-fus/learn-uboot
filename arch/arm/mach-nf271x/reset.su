@@ -1,5 +1,0 @@
-arch/arm/mach-nf271x/reset.c:33:1:__reset_cpu.constprop	0	static
-arch/arm/mach-nf271x/reset.c:61:27:efi_reset_system	16	static
-arch/arm/mach-nf271x/reset.c:28:6:hw_watchdog_disable	0	static
-arch/arm/mach-nf271x/reset.c:51:6:reset_cpu	16	static
-arch/arm/mach-nf271x/reset.c:88:14:efi_reset_system_init	16	static

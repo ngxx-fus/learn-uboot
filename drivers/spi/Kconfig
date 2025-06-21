@@ -122,6 +122,13 @@ config BCMSTB_SPI
 	  be used to access the SPI flash on platforms embedding this
 	  Broadcom SPI core.
 
+config NFSTB_SPI
+	bool "NFSTB SPI driver"
+	help
+	  Enable the FakeBroadcom set-top box SPI driver. This driver can
+	  be used to access the SPI flash on platforms embedding this
+	  FakeBroadcom SPI core.
+
 config CORTINA_SFLASH
 	bool "Cortina-Access Serial Flash controller driver"
 	depends on DM_SPI && SPI_MEM

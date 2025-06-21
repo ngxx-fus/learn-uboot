@@ -1,8 +1,0 @@
-drivers/dfu/dfu_mmc.c:25:12:mmc_block_op	80	static
-drivers/dfu/dfu_mmc.c:97:12:mmc_file_op	80	static
-drivers/dfu/dfu_mmc.c:197:5:dfu_write_medium_mmc	64	static
-drivers/dfu/dfu_mmc.c:224:5:dfu_flush_medium_mmc	32	static
-drivers/dfu/dfu_mmc.c:248:5:dfu_get_medium_size_mmc	16	static
-drivers/dfu/dfu_mmc.c:298:5:dfu_read_medium_mmc	64	static
-drivers/dfu/dfu_mmc.c:319:6:dfu_free_entity_mmc	32	static
-drivers/dfu/dfu_mmc.c:340:5:dfu_fill_entity_mmc	240	static

@@ -1,8 +1,45 @@
-#! /bin/sh
-my_vender=ngxxfus
-my_board=myrpi4cp
-target=myrpi4cp_defconfig
+#! /bin/zsh
+
+source /mnt/sda1/Linux_Applications/shell_utils/colors.sh
+source /mnt/sda1/Linux_Applications/shell_utils/functions.sh
+
 clear;
-make -j8 distclean ;
-make -j8 ARCH=arm CROSS_COMPILE=aarch64-linux-gnu-  $target; 
-make -j8 ARCH=arm CROSS_COMPILE=aarch64-linux-gnu-  ;
+# echo -e '\n\n\n\n\n\n\n\n\n\n\n\n'
+
+print_info "[build] custom-uboot"
+
+
+my_vendor=ngxxfus
+my_board=nfus_4
+# target=rpi_4_defconfig
+target=nfus_4_defconfig
+
+print_info "vendor: $my_vendor"
+print_info "board: $my_board"
+print_info "target: $target"
+
+print_info "${LIGHT_BLUE} Clear old config/builds${NORM}"
+make -j8 distclean   | tee .build.log ;
+if [ $? -eq 0 ]; then :; else exit 1; fi
+
+print_info "${LIGHT_BLUE} Make .config${NORM}"
+make -j8 ARCH=arm CROSS_COMPILE=aarch64-linux-gnu-  $target   | tee -a .build.log ; 
+if [ $? -eq 0 ]; then :; else exit 1; fi
+
+print_info "${LIGHT_BLUE} Building... ${NORM}"
+make -j8 ARCH=arm CROSS_COMPILE=aarch64-linux-gnu-    | tee -a .build.log ;
+if [ $? -eq 0 ]; then :; else exit 1; fi
+
+
+print_info "Do you want to copy to SDCard?"
+if [ $? -eq 0 ]; then :; else exit 1; fi
+copy2sdcard_flag=${yes_or_no}
+
+
+print_info "${LIGHT_BLUE}Copy <dtb>${NORM}"
+cp -rf arch/arm/dts/nf2711-nfus-4-b.dtb  /media/ngxxfus/3A05-A436/
+if [ $? -eq 0 ]; then :; else exit 1; fi
+
+print_info "${LIGHT_BLUE}Copy <u-boot>${NORM}"
+cp -rf u-boot-nodtb.bin  /media/ngxxfus/3A05-A436/kernel8.img
+if [ $? -eq 0 ]; then :; else exit 1; fi

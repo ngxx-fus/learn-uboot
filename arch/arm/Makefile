@@ -55,7 +55,11 @@ machine-$(CONFIG_ARCH_APPLE)		+= apple
 machine-$(CONFIG_ARCH_ASPEED)		+= aspeed
 machine-$(CONFIG_ARCH_AT91)		+= at91
 machine-$(CONFIG_ARCH_BCM283X)		+= bcm283x
-machine-$(CONFIG_ARCH_NF271X)		+= nf271x
+
+###############################################
+machine-$(CONFIG_ARCH_NF283X)		+= nf283x
+###############################################
+
 machine-$(CONFIG_ARCH_BCMBCA)		+= bcmbca
 machine-$(CONFIG_ARCH_BCMSTB)		+= bcmstb
 machine-$(CONFIG_ARCH_DAVINCI)		+= davinci

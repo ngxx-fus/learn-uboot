@@ -1,0 +1,12 @@
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * This include file covers the common peripherals and configuration between
+ * nf2835, nf2836 and nf2837 implementations that interact with Nfus's
+ * firmware interface.
+ */
+
+#include <dt-bindings/power/ngxxfusfus-power.h>
+
+&v3d {
+	power-domains = <&power NFUS_POWER_DOMAIN_V3D>;
+};

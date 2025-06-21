@@ -1,3 +1,0 @@
-net/ping.c:65:13:ping_timeout_handler	16	static
-net/ping.c:71:6:ping_start	48	static
-net/ping.c:79:6:ping_receive	96	static

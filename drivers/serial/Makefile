@@ -45,8 +45,10 @@ obj-$(CONFIG_PIC32_SERIAL) += serial_pic32.o
 obj-$(CONFIG_BCM283X_MU_SERIAL) += serial_bcm283x_mu.o
 obj-$(CONFIG_BCM283X_PL011_SERIAL) += serial_bcm283x_pl011.o
 
-obj-$(CONFIG_BCM283X_MU_SERIAL) += serial_nf271x_mu.o
-obj-$(CONFIG_BCM283X_PL011_SERIAL) += serial_nf271x_pl011.o
+###############################################
+obj-$(CONFIG_NF283X_MU_SERIAL) += serial_nf283x_mu.o
+obj-$(CONFIG_NF283X_PL011_SERIAL) += serial_nf283x_pl011.o
+###############################################
 
 obj-$(CONFIG_MSM_SERIAL) += serial_msm.o
 obj-$(CONFIG_MSM_GENI_SERIAL) += serial_msm_geni.o

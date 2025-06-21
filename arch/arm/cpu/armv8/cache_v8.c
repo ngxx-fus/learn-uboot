@@ -7,9 +7,6 @@
  * Alexander Graf <agraf@suse.de>
  */
 
-#pragma message ("[Build] arch/arm/cpu/armv8/cache_v8.c")
-
- 
 #include <common.h>
 #include <cpu_func.h>
 #include <hang.h>

@@ -1,3 +1,0 @@
-lib/fdtdec_common.c:22:5:fdtdec_get_int	48	static
-lib/fdtdec_common.c:40:14:fdtdec_get_uint	48	static
-lib/fdtdec_common.c:58:5:fdtdec_get_child_count	32	static

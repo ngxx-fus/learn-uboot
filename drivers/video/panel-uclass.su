@@ -1,3 +1,0 @@
-drivers/video/panel-uclass.c:13:5:panel_enable_backlight	0	static
-drivers/video/panel-uclass.c:31:5:panel_set_backlight	0	static
-drivers/video/panel-uclass.c:41:5:panel_get_display_timing	0	static

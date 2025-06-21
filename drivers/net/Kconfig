@@ -178,6 +178,58 @@ config BCMGENET
 	help
 	  This driver supports the BCMGENET Ethernet MAC.
 
+
+###########################################################################
+config NF_SF2_ETH
+	bool "Broadcom SF2 (Starfighter2) Ethernet support"
+	select PHYLIB
+	help
+	  This is an abstract framework which provides a generic interface
+	  to MAC and DMA management for multiple Broadcom SoCs such as
+	  Cygnus, NSP and nf28155_ap platforms.
+
+config NF_SF2_ETH_DEFAULT_PORT
+	int "Broadcom SF2 (Starfighter2) Ethernet default port number"
+	depends on NF_SF2_ETH
+	default 0
+	help
+	  Default port number for the Starfighter2 ethernet driver.
+
+config NF_SF2_ETH_GMAC
+	bool "Broadcom SF2 (Starfighter2) GMAC Ethernet support"
+	depends on NF_SF2_ETH
+	help
+	  This flag enables the ethernet support for Broadcom platforms with
+	  GMAC such as Cygnus. This driver is based on the framework provided
+	  by the NF_SF2_ETH driver.
+	  Say Y to any nfcygnus based platforms.
+
+config NF6348_ETH
+	bool "NF6348 EMAC support"
+	depends on ARCH_BMIPS
+	select DMA
+	select DMA_CHANNELS
+	select MII
+	select PHYLIB
+	help
+	  This driver supports the NF6348 Ethernet MAC.
+
+config NF6368_ETH
+	bool "NF6368 EMAC support"
+	depends on ARCH_BMIPS
+	select DMA
+	select MII
+	help
+	  This driver supports the NF6368 Ethernet MAC.
+
+config NFGENET
+	bool "NFGENET V5 support"
+	select PHYLIB
+	help
+	  This driver supports the NFGENET Ethernet MAC.
+
+#############################################################################
+
 source "drivers/net/bnxt/Kconfig"
 
 config CORTINA_NI_ENET

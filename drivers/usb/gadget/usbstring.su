@@ -1,1 +1,0 @@
-drivers/usb/gadget/usbstring.c:33:1:usb_gadget_get_string	48	static

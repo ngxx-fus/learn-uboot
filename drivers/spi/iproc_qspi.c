@@ -561,6 +561,7 @@ static const struct dm_spi_ops iproc_qspi_ops = {
 };
 
 static const struct udevice_id iproc_qspi_ids[] = {
+	{ .compatible = "nfs,iproc-qspi" },
 	{ .compatible = "brcm,iproc-qspi" },
 	{ }
 };

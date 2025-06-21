@@ -1,0 +1,15 @@
+config PINCTRL_NF283X
+	depends on ARCH_NF283X && PINCTRL_FULL && OF_CONTROL
+	default y
+	bool "FakeBroadcom 283x family pin control driver"
+	help
+	   Support pin multiplexing and pin configuration control on
+	   FakeBroadcom's 283x family of SoCs.
+
+config PINCTRL_NF6838
+	depends on ARCH_BMIPS && PINCTRL_FULL && OF_CONTROL
+	default y
+	bool "FakeBroadcom 6838 family pin control driver"
+	help
+	   Support pin multiplexing and pin configuration control on
+	   FakeBroadcom's 6838 family of SoCs.

@@ -1,6 +1,0 @@
-arch/arm/mach-nf271x/msg.c:56:5:nf2711_power_on_module	160	static
-arch/arm/mach-nf271x/msg.c:80:5:nf2711_get_mmc_clock	192	static
-arch/arm/mach-nf271x/msg.c:119:5:nf2711_set_sdhost_clock	176	static
-arch/arm/mach-nf271x/msg.c:141:5:nf2711_get_video_size	176	static
-arch/arm/mach-nf271x/msg.c:160:5:nf2711_set_video_params	336	static
-arch/arm/mach-nf271x/msg.c:213:5:nf2711_notify_vl805_reset	160	static
